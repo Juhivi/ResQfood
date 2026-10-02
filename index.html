@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ResQFood — Rescue More. Waste Less.</title>
+  <meta name="description" content="ResQFood AI-powered food rescue and logistics platform demo." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">◒</div>
+        <div>
+          <div class="brand-name">ResQ<span>Food</span></div>
+          <div class="brand-tag">Rescue More. Waste Less.</div>
+        </div>
+      </div>
+
+      <div class="role-switcher">
+        <label>Demo role</label>
+        <select id="roleSelect">
+          <option value="donor">Donor</option>
+          <option value="ngo">NGO</option>
+          <option value="volunteer">Volunteer</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+
+      <nav class="nav-list">
+        <button class="nav-item active" data-view="dashboard">⌂ <span>Dashboard</span></button>
+        <button class="nav-item" data-view="donation">＋ <span>New Donation</span></button>
+        <button class="nav-item" data-view="matching">✦ <span>AI NGO Matching</span></button>
+        <button class="nav-item" data-view="tasks">♧ <span>Volunteer Tasks</span></button>
+        <button class="nav-item" data-view="impact">▥ <span>Impact Analytics</span></button>
+        <button class="nav-item" data-view="partners">♧ <span>NGO Partners</span></button>
+        <button class="nav-item" data-view="notifications">♢ <span>Notifications <b class="nav-badge">3</b></span></button>
+        <button class="nav-item" data-view="settings">⚙ <span>Settings</span></button>
+      </nav>
+
+      <div class="sidebar-card">
+        <div class="leaf">❧</div>
+        <strong>Good Food<br/>Brighter Communities</strong>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu">☰</button>
+        <div class="search-box">⌕ <input id="globalSearch" placeholder="Search donations, NGOs, volunteers..." /></div>
+        <div class="top-actions">
+          <button class="icon-btn" data-view="notifications">♧</button>
+          <div class="profile">
+            <div class="avatar">K</div>
+            <div><strong>Komal Vishwakarma</strong><small id="roleLabel">Campus Coordinator</small></div>
+          </div>
+        </div>
+      </header>
+
+      <div id="content"></div>
+    </main>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
